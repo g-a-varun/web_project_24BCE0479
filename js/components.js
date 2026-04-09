@@ -1,12 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
   const path = window.location.pathname;
 
-  let base = "";
+  let base = ".";
 
-  if (path.includes("/assignments/") || path.includes("/tasks/")) {
+  // If inside subfolders like /tasks/
+  if (path.includes("/tasks/") || path.includes("/assignments/")) {
     base = "..";
-  } else {
-    base = ".";
   }
 
   fetch(base + "/components/navbar.html")
@@ -15,7 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const updated = data.replace(/%BASE%/g, base);
       document.getElementById("navbar").innerHTML = updated;
 
-      // 🔥 HANDLE HASH SCROLL (IMPORTANT)
       const hash = window.location.hash;
       if (hash) {
         setTimeout(() => {

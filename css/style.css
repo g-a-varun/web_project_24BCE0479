@@ -76,7 +76,7 @@ nav a:hover {
   flex: 1;
 }
 
-/* ===== CONTENT ===== */
+/* ===== CONTENT =====
 .content {
   margin: 30px auto;
   width: 100%;
@@ -88,6 +88,21 @@ nav a:hover {
   gap: 20px;              
   justify-content: center;
   flex-wrap: wrap;        
+}
+
+.content {
+  display: flex;
+  flex-direction: column;   
+  align-items: center;       
+} */
+
+.content {
+  margin: 30px auto;
+  width: 100%;
+  background: #111827;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #1f2937;
 }
 
 .testimonials {
@@ -353,19 +368,19 @@ hr {
 /* Bigger icon */
 .float-icon {
   float: left;
-  width: 40px;   /* increased size */
+  width: 40px;   
   margin-right: 15px;
 }
 
 /* Text aligned with icon */
 .float-text {
   margin: 0;
-  line-height: 40px;  /* matches icon height */
+  line-height: 40px;  
   font-size: 16px;
   color: #e5e7eb;
 }
 
-/* ===== CLEAR FLOAT (VERY IMPORTANT) ===== */
+/* ===== CLEAR FLOAT ===== */
 .contact-box::after {
   content: "";
   display: block;
@@ -750,15 +765,4 @@ hr {
   transform: translateY(-5px);
   background: #374151;
   box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-}
-
-/* ===== CONTENT HEADER FIX ===== */
-.content-header {
-  width: 100%;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.content-header h2 {
-  margin-bottom: 5px;
 }
