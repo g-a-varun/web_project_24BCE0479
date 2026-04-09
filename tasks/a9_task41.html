@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live Validation</title>
+    <link rel="stylesheet" href="events.css">
+    <script>
+
+        function validateEmail() {
+            let email = document.getElementById("email").value;
+            let msg = document.getElementById("emailMsg");
+
+            if (email.includes("@") && email.includes(".")) {
+                msg.innerText = "Valid Email";
+                msg.style.color = "green";
+                return true;
+            } else {
+                msg.innerText = "Invalid Email";
+                msg.style.color = "red";
+                return false;
+            }
+        }
+
+        function validatePassword() {
+            let password = document.getElementById("password").value;
+            let msg = document.getElementById("passMsg");
+
+            if (password.length >= 8) {
+                msg.innerText = "Strong Password";
+                msg.style.color = "green";
+                return true;
+            } else {
+                msg.innerText = "Minimum 8 characters required";
+                msg.style.color = "red";
+                return false;
+            }
+        }
+
+        function validateForm(event) {
+            event.preventDefault();
+
+            let emailValid = validateEmail();
+            let passValid = validatePassword();
+
+            if (!emailValid || !passValid) {
+                alert("Fix errors before submitting.");
+                return;
+            }
+
+            alert("Form submitted successfully!");
+        }
+
+    </script>
+</head>
+
+<body>
+
+<h2>Live Form Validation</h2>
+
+<form onsubmit="validateForm(event)">
+
+    Email:<br>
+    <input type="text" id="email" oninput="validateEmail()"><br>
+    <span id="emailMsg"></span><br><br>
+
+    Password:<br>
+    <input type="password" id="password" oninput="validatePassword()"><br>
+    <span id="passMsg"></span><br><br>
+
+    <button type="submit">Submit</button>
+
+</form>
+
+</body>
+</html>

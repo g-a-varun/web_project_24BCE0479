@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Shopping Checkout</title>
+    <link rel="stylesheet" href="forms.css">
+    <script>
+
+        function validateCheckout(event) {
+            event.preventDefault();
+
+            let name = document.getElementById("fullName").value.trim();
+            let phone = document.getElementById("phoneNumber").value.trim();
+            let address = document.getElementById("address").value.trim();
+            let zip = document.getElementById("zipCode").value.trim();
+            let payment = document.querySelector('input[name="payment"]:checked');
+
+            let phonePattern = /^\d{10}$/;
+            let zipPattern = /^\d{6}$/;
+
+            // 1. Required fields
+            if (name === "" || address === "") {
+                alert("Full name and delivery address are required.");
+                return;
+            }
+
+            // 2. Phone validation
+            if (!phonePattern.test(phone)) {
+                alert("Phone number must be exactly 10 digits.");
+                return;
+            }
+
+            // 3. ZIP validation
+            if (!zipPattern.test(zip)) {
+                alert("ZIP/Postal code must be exactly 6 digits.");
+                return;
+            }
+
+            // 4. Payment selection
+            if (!payment) {
+                alert("Please select a payment option.");
+                return;
+            }
+
+            // SUCCESS
+            alert("Checkout successful!");
+
+        }
+
+    </script>
+</head>
+
+<body>
+
+<h2>Checkout Form</h2>
+
+<form onsubmit="validateCheckout(event)">
+
+    <label>Full Name:</label><br>
+    <input type="text" id="fullName"><br><br>
+
+    <label>Phone Number:</label><br>
+    <input type="text" id="phoneNumber"><br><br>
+
+    <label>Delivery Address:</label><br>
+    <textarea id="address"></textarea><br><br>
+
+    <label>ZIP / Postal Code:</label><br>
+    <input type="text" id="zipCode"><br><br>
+
+    <label>Payment Option:</label><br>
+    <input type="radio" name="payment" value="Credit Card"> Credit Card<br>
+    <input type="radio" name="payment" value="Debit Card"> Debit Card<br>
+    <input type="radio" name="payment" value="UPI"> UPI<br>
+    <input type="radio" name="payment" value="Cash on Delivery"> Cash on Delivery<br><br>
+
+    <button type="submit">Place Order</button>
+
+</form>
+
+</body>
+</html>

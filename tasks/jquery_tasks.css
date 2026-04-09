@@ -1,0 +1,113 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== BODY ===== */
+body {
+  background: #f4f6f9;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* ===== HEADINGS ===== */
+h2, title {
+  margin-bottom: 20px;
+  text-decoration: underline;
+  color: #1f2937;
+}
+
+/* ===== BUTTON ===== */
+button {
+  padding: 10px 15px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #1e40af;
+}
+
+/* ===== PARAGRAPH ===== */
+p {
+  margin: 10px auto;
+  max-width: 500px;
+  padding: 10px;
+}
+
+/* ===== HIGHLIGHT ===== */
+.highlight {
+  background: #bfdbfe;
+  border-radius: 6px;
+}
+
+/* ===== GALLERY ===== */
+#main {
+  width: 400px;
+  height: 250px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+.thumb {
+  width: 100px;
+  cursor: pointer;
+  margin: 5px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.thumb:hover {
+  transform: scale(1.05);
+}
+
+/* ===== TODO LIST ===== */
+ul {
+  list-style: none;
+  padding: 0;
+  max-width: 300px;
+  margin: 20px auto;
+}
+
+li {
+  background: #ffffff;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+li:hover {
+  background: #e5e7eb;
+}
+
+/* Completed task */
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* ===== IMAGE HOVER BOX ===== */
+div {
+  width: 300px;
+  margin: 20px auto;
+  padding: 10px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+img {
+  width: 100%;
+  border-radius: 8px;
+}

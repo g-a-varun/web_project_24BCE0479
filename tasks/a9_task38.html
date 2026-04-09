@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="events.css">
+    <script>
+        function validateForm(event) {
+            event.preventDefault();
+
+            let username = document.getElementById("username");
+            let email = document.getElementById("email");
+            let password = document.getElementById("password");
+
+            if (username.value.trim() === "") {
+                username.focus();
+                return;
+            }
+
+            if (email.value.trim() === "") {
+                email.focus();
+                return;
+            }
+
+            if (password.value.trim() === "") {
+                password.focus();
+                return;
+            }
+
+            alert("Form submitted successfully!");
+        }
+    </script>
+</head>
+
+<body>
+
+<h2>Registration Form</h2>
+
+<form onsubmit="validateForm(event)">
+    Username:<br>
+    <input type="text" id="username"><br><br>
+
+    Email:<br>
+    <input type="text" id="email"><br><br>
+
+    Password:<br>
+    <input type="password" id="password"><br><br>
+
+    <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>

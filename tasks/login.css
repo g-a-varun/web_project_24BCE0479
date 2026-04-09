@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 16px;
+    background: linear-gradient(135deg,#667eea, red);
+}
+
+.login-card {
+    background: #ffffff;
+    padding: 30px 25px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.login-card h1 {
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 25px;
+}
+
+.form-card {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 13px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 8px rgba(102, 126, 234, 0.6);
+}
+
+.forgot-password {
+    text-align: right;
+    margin-bottom: 15px;
+}
+
+.forgot-password a {
+    color: #667eea;
+    transition: all 0.3s ease;
+}
+
+.forgot-password a:hover {
+    color: #764ba2;
+}
+
+button {
+    /* margin-top: 5px;
+    margin-left: 35px; */
+    margin: 0 auto;
+    display: block; 
+    width: 80%;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    color: #fff;
+    background: #667eea;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: #764ba2;
+    transform: translateY(-2px);
+}

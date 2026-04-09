@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Highlight Paragraphs</title>
+
+    <link rel="stylesheet" href="jquery_tasks.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+<h2>Highlight Paragraphs</h2>
+
+<p>First paragraph</p>
+<p>Second paragraph</p>
+
+<script>
+$(document).ready(function(){
+
+    $("p").addClass("highlight");
+
+    $("p").click(function(){
+        $(this).toggleClass("highlight");
+    });
+
+});
+</script>
+
+</body>
+</html>

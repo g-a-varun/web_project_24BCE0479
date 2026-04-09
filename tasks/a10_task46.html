@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+.container {
+    position: relative;
+    width: 500px;
+    height: 350px;
+}
+
+img {
+    position: absolute;
+    width: 200px;
+    cursor: pointer;
+}
+
+.img1 { top: 0; left: 0; z-index: 1; }
+.img2 { top: 40px; left: 60px; z-index: 2; }
+.img3 { top: 80px; left: 120px; z-index: 3; }
+
+</style>
+</head>
+<body>
+
+<div class="container">
+    <img src="../images/css_advance/kohli.png" class="img1">
+    <img src="../images/css_advance/rohit.jpg" class="img2">
+    <img src="../images/css_advance/dhoni.jpg" class="img3">
+</div>
+
+<script>
+
+let images = document.querySelectorAll("img");
+
+images.forEach(img => {
+    img.addEventListener("click", function() {
+
+        images.forEach((i, index) => {
+            i.style.zIndex = index + 1;
+        });
+
+        this.style.zIndex = 10;
+    });
+});
+
+</script>
+
+</body>
+</html>

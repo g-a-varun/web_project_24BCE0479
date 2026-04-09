@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #054b90;
+    color: white;
+}
+
+.header::before {
+    content: "";
+    flex: 1;
+}
+
+.college-name {
+    flex: 1;
+    text-align: center;
+}
+
+.college-name h2 {
+    margin: 0;
+    font-weight: bold;
+}
+
+.navigation {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.navigation ul a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 8px;
+}
+
+.navigation ul a:hover {
+    background-color: #ffffff;
+    color: #054b90;
+}
+
+.main {
+    padding: 20px;
+}
+
+.container {
+    width: 900px;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+}
+
+.syllabus ul {
+    padding-left: 20px;
+}
+
+.fee-structure table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.fee-structure th,
+.fee-structure td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+.fee-structure th {
+    background-color: #eaeaea;
+}
+
+.footer {
+    background-color: #054b90;
+    color: white;
+    text-align: center;
+    padding: 1px;
+    margin-top: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

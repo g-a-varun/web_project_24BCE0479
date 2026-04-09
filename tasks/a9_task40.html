@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Tooltip</title>
+    <link rel="stylesheet" href="events.css">
+</head>
+
+<body>
+
+<h2>Product</h2>
+
+<img id="productImage"
+     src="../images/products/google.jpeg"
+     width="200"
+     alt="Product Image">
+
+<div id="tooltip">
+    Price: ₹59,999 <br>
+    Flagship smartphone with great performance
+</div>
+
+<script>
+    const img = document.getElementById("productImage");
+    const tooltip = document.getElementById("tooltip");
+
+    // Show tooltip on mouseover
+    img.addEventListener("mouseover", function () {
+        tooltip.style.display = "block";
+    });
+
+    // Hide tooltip on mouseout
+    img.addEventListener("mouseout", function () {
+        tooltip.style.display = "none";
+    });
+
+    // Move tooltip with cursor
+    img.addEventListener("mousemove", function (event) {
+        tooltip.style.left = (event.clientX + 10) + "px";
+        tooltip.style.top = (event.clientY + 10) + "px";
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="./contact.css">
+</head>
+<body>
+
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+
+        <form>
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone">
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <select id="subject">
+                    <option value="">-- Select Subject --</option>
+                    <option>General Inquiry</option>
+                    <option>Support</option>
+                    <option>Feedback</option>
+                    <option>Business</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" rows="4"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="file">Attach File</label>
+                <input type="file" id="file">
+            </div>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+</body>
+</html>

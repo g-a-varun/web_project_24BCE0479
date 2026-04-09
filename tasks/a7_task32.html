@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Status Change</title>
+</head>
+
+<body>
+
+<p id="status" style="color: gray;">Status: Offline</p>
+
+<button onclick="goOnline()">Go Online</button>
+
+<script>
+    function goOnline() {
+        document.getElementById("status").innerHTML = "Status: Online";
+        document.getElementById("status").style.color = "green";
+    }
+</script>
+
+</body>
+</html>

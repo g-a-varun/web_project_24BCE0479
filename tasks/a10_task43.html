@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+.container {
+    display: flex;
+    gap: 40px;
+    margin: 50px;
+}
+
+.card {
+    width: 150px;
+    height: 80px;
+    background: lightgray;
+    position: relative;
+    text-align: center;
+    line-height: 80px;
+}
+
+.tooltip {
+    position: absolute;
+    top: -30px;
+    left: 20px;
+    background: black;
+    color: white;
+    padding: 5px;
+    display: none;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="card">Card 1
+        <div class="tooltip">Details 1</div>
+    </div>
+
+    <div class="card">Card 2
+        <div class="tooltip">Details 2</div>
+    </div>
+</div>
+
+<script>
+document.querySelectorAll(".card").forEach(card => {
+    let tooltip = card.querySelector(".tooltip");
+
+    card.addEventListener("mouseenter", () => {
+        tooltip.style.display = "block";
+    });
+
+    card.addEventListener("mouseleave", () => {
+        tooltip.style.display = "none";
+    });
+});
+</script>
+
+</body>
+</html>

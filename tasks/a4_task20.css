@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f4f6f8;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 60px;
+}
+
+.form {
+    width: 320px;
+    background: #ffffff;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+h2 {
+    text-align: center;
+    background: #e5e7eb;
+    padding: 12px;
+    margin: -25px -25px 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 18px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border-color: #2563eb;
+    outline: none;
+}
+
+.check {
+    margin-bottom: 18px;
+    font-size: 14px;
+}
+
+.gender {
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #1d4ed8;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VTOP Login</title>
+    <link rel="stylesheet" href="forms.css">
+    <style>
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+
+    <script>
+
+        function validateLogin(event) {
+            event.preventDefault();
+
+            let username = document.getElementById("username").value.trim();
+            let password = document.getElementById("password").value.trim();
+            let userType = document.getElementById("userType").value;
+
+            let usernamePattern = /^\d{2}[a-zA-Z]{3}\d{4}$/;
+
+            // Clear previous errors
+            document.getElementById("usernameError").innerText = "";
+            document.getElementById("passwordError").innerText = "";
+            document.getElementById("userTypeError").innerText = "";
+
+            // 1. Username validation
+            if (!usernamePattern.test(username)) {
+                document.getElementById("usernameError").innerText =
+                    "Format: 2 digits + 3 letters + 4 digits (e.g., 12abc3456)";
+                return;
+            }
+
+            // 2. Password validation
+            if (password.length < 8) {
+                document.getElementById("passwordError").innerText =
+                    "Password must be at least 8 characters.";
+                return;
+            }
+
+            // 3. User type validation
+            if (userType === "") {
+                document.getElementById("userTypeError").innerText =
+                    "Please select a user type.";
+                return;
+            }
+
+            // SUCCESS → Show dashboard
+            document.getElementById("loginForm").style.display = "none";
+            document.getElementById("dashboard").style.display = "block";
+            document.getElementById("welcomeText").innerText = "Welcome, " + username;
+
+        }
+
+    </script>
+</head>
+
+<body>
+
+<div id="loginForm">
+    <h2>VTOP Login</h2>
+
+    <form onsubmit="validateLogin(event)">
+
+        Username:<br>
+        <input type="text" id="username"><br>
+        <span id="usernameError" class="error"></span><br>
+
+        Password:<br>
+        <input type="password" id="password"><br>
+        <span id="passwordError" class="error"></span><br>
+
+        User Type:<br>
+        <select id="userType">
+            <option value="">--Select--</option>
+            <option value="Student">Student</option>
+            <option value="Faculty">Faculty</option>
+        </select><br>
+        <span id="userTypeError" class="error"></span><br><br>
+
+        <button type="submit">Login</button>
+
+    </form>
+</div>
+
+<div id="dashboard" style="display:none;">
+    <h2 id="welcomeText"></h2>
+    <p>This is your dashboard.</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Toggle Paragraph</title>
+
+    <link rel="stylesheet" href="jquery_tasks.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+<h2>Toggle Paragraph</h2>
+
+<button id="btn">Toggle Paragraph</button>
+
+<p id="para">This is a paragraph.</p>
+
+<script>
+$(document).ready(function(){
+    $("#btn").click(function(){
+        $("#para").toggle();
+    });
+});
+</script>
+
+</body>
+</html>

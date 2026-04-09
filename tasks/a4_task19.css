@@ -1,0 +1,49 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+/* PAGE */
+body {
+  background: #f4f6f8;
+}
+
+/* CONTAINER (CENTER PAGE) */
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+/* FLEX BOX (IMPORTANT PART) */
+.flex-box {
+  display: flex;
+  justify-content: center;
+  gap: 20px;   /* spacing between boxes */
+  margin-top: 30px;
+}
+
+/* BOXES */
+.box {
+  flex: 1;   /* equal width */
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+}
+
+/* IMAGE */
+.box img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>University Registration</title>
+    <link rel="stylesheet" href="forms.css">
+    <script>
+
+        function validateForm(event) {
+            event.preventDefault();
+
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let password = document.getElementById("password").value;
+            let confirmPassword = document.getElementById("confirmPassword").value;
+            let age = document.getElementById("age").value.trim();
+
+            // 1. Empty field check
+            if (name === "" || email === "" || password === "" || confirmPassword === "" || age === "") {
+                alert("All fields are required.");
+                return;
+            }
+
+            // 2. Email format check
+            if (!email.includes("@") || !email.includes(".")) {
+                alert("Enter a valid email address.");
+                return;
+            }
+
+            // 3. Password length check
+            if (password.length < 8) {
+                alert("Password must be at least 8 characters long.");
+                return;
+            }
+
+            // 4. Password match check
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                return;
+            }
+
+            // 5. Age validation
+            if (isNaN(age) || Number(age) < 18) {
+                alert("Age must be a number ≥ 18.");
+                return;
+            }
+
+            // SUCCESS
+            alert("Registration Successful!");
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <h2>University Registration Form</h2>
+
+    <form onsubmit="validateForm(event)">
+
+        <label>Name:</label><br>
+        <input type="text" id="name"><br><br>
+
+        <label>Email:</label><br>
+        <input type="text" id="email"><br><br>
+
+        <label>Password:</label><br>
+        <input type="password" id="password"><br><br>
+
+        <label>Confirm Password:</label><br>
+        <input type="password" id="confirmPassword"><br><br>
+
+        <label>Age:</label><br>
+        <input type="text" id="age"><br><br>
+
+        <button type="submit">Register</button>
+
+    </form>
+
+</body>
+</html>
