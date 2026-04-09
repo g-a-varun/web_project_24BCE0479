@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* ONLY HERO SECTION FIX */
+        .hero-box {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        /* PROFILE IMAGE */
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        /* TEXT ALIGNMENT */
+        .profile-text {
+            max-width: 600px;
+        }
+
+        .profile-text h2 {
+            margin: 0 0 5px 0;
+        }
+
+        .profile-text .subtitle {
+            margin-bottom: 12px;
+            color: #aaa;
+        }
+    </style>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+<div id="navbar"></div>
+
+<h1>Profile</h1>
+
+<div class="layout">
+
+    <!-- HERO SECTION -->
+    <div class="content">
+
+        <div class="hero-box">
+
+            <img src="images/profile-icon.jpg" class="profile-img">
+
+            <div class="profile-text">
+                <h2>G.A. Varun</h2>
+                <h3 class="subtitle">B.Tech IT Student</h3>
+
+                <p>
+                    I am a passionate web development student currently pursuing my degree at VIT University.
+                    I enjoy building interactive and visually appealing websites using modern web technologies.
+                </p>
+
+                <p>
+                    My interests include frontend development, UI design, and creating user-friendly web applications.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- FEATURES -->
+    <div class="content">
+
+        <h2>My Strengths</h2>
+
+        <div class="features">
+
+            <div class="feature-box">
+                <i data-lucide="briefcase"></i>
+                <h3>Experience</h3>
+                <p>
+                    Hands-on experience through academic projects,
+                    assignments, and continuous practice in web development.
+                </p>
+            </div>
+
+            <div class="feature-box">
+                <i data-lucide="code"></i>
+                <h3>Skills</h3>
+                <p>
+                    HTML, CSS, JavaScript basics along with
+                    understanding of responsive design and UI development.
+                </p>
+            </div>
+
+            <div class="feature-box">
+                <i data-lucide="target"></i>
+                <h3>Mission</h3>
+                <p>
+                    To become a full-stack developer and build
+                    impactful real-world applications.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="footer">
+    <p>VIT University</p>
+    <p>Email: student@vit.ac.in</p>
+    <p>Phone: +91 XXXXX XXXXX</p>
+    <p>© 2025 All Rights Reserved</p>
+</div>
+
+<script src="js/components.js"></script>
+
+<!-- Activate icons -->
+<script>
+  lucide.createIcons();
+</script>
+
+</body>
+</html>
